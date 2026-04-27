@@ -1,0 +1,36 @@
+.App {
+  min-height: 100vh;
+  background: #0d1117;
+  position: relative;
+}
+
+/* Ambient blobs background */
+.ambient {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.ambient::before,
+.ambient::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.35;
+}
+.ambient::before {
+  width: 520px;
+  height: 520px;
+  background: #00d2ff;
+  top: -160px;
+  left: -120px;
+}
+.ambient::after {
+  width: 580px;
+  height: 580px;
+  background: #6f4bff;
+  bottom: -200px;
+  right: -140px;
+}
