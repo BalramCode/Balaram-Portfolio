@@ -8,6 +8,7 @@ import Experience from "./Experience";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import MagneticCursor from "./MagneticCursor";
+import Achievements from "./Achievements";
 
 const Portfolio = () => {
   // Reveal-on-scroll using IntersectionObserver
@@ -39,6 +40,7 @@ const Portfolio = () => {
         <TechStack />
         <Projects />
         <Experience />
+        <Achievements/>
         <Contact />
       </main>
       <Footer />

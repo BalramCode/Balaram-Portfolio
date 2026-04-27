@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { personalInfo } from "../mock";
 import { Mail, MapPin, Send, Code2, Phone } from "lucide-react";
 import { toast } from "sonner";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-
+import emailjs from "@emailjs/browser"; // Make sure to run: npm install @emailjs/browser
 
 const Contact = () => {
+  const formRef = useRef();
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [sending, setSending] = useState(false);
 
@@ -13,21 +14,38 @@ const Contact = () => {
 
   const submit = async (e) => {
     e.preventDefault();
+    
     if (!form.name || !form.email || !form.message) {
       toast.error("Please fill in name, email and message.");
       return;
     }
-    setSending(true);
-    // Persist locally for the frontend-only phase
-    const stored = JSON.parse(localStorage.getItem("bn_messages") || "[]");
-    stored.push({ ...form, at: new Date().toISOString() });
-    localStorage.setItem("bn_messages", JSON.stringify(stored));
 
-    setTimeout(() => {
-      setSending(false);
-      toast.success("Message queued. I'll reply within 24h.");
-      setForm({ name: "", email: "", subject: "", message: "" });
-    }, 900);
+    setSending(true);
+
+    // Replace these strings with your actual EmailJS IDs
+    const SERVICE_ID = "service_dc5d6sa";
+    const TEMPLATE_ID = "template_s8s0dqi";
+    const PUBLIC_KEY = "nrcKo0UqyL_z483jQ";
+
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+      .then(
+        () => {
+          setSending(false);
+          toast.success("Message sent! I'll reply within 24h.");
+          setForm({ name: "", email: "", subject: "", message: "" });
+          
+          // Optional: Local backup
+          const stored = JSON.parse(localStorage.getItem("bn_messages") || "[]");
+          stored.push({ ...form, at: new Date().toISOString() });
+          localStorage.setItem("bn_messages", JSON.stringify(stored));
+        },
+        (error) => {
+          setSending(false);
+          toast.error("Failed to send message. Please try again.");
+          console.error("EmailJS Error:", error.text);
+        }
+      );
   };
 
   return (
@@ -124,6 +142,7 @@ const Contact = () => {
           {/* Form */}
           <div className="lg:col-span-7 reveal">
             <form
+              ref={formRef}
               onSubmit={submit}
               className="glass rounded-2xl p-6 md:p-8 border border-white/10"
             >

@@ -181,7 +181,7 @@ const Hero = () => {
                         @BALRAMCODE
                       </div>
                       <div className="text-slate-100 text-lg font-semibold mt-1">
-                        Building, shipping, repeating.
+                        Crafting solutions with code, logic, and AI.
                       </div>
                     </div>
                     {/* <div className="glass rounded-xl px-3 py-2 text-[11px] mono text-slate-300">

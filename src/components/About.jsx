@@ -12,13 +12,14 @@ const About = () => {
               · 01 — ABOUT
             </div>
             <h2 className="mt-3 text-4xl md:text-5xl font-semibold leading-tight">
-              Crafting digital products that <span className="text-gradient">scale & feel alive</span>.
+              Developing modern web solutions with <span className="text-gradient">clean code & performance</span>.
             </h2>
+
             <p className="mt-5 text-slate-400 leading-relaxed">
-              I obsess over the small details — micro-interactions, type rhythm,
-              and the line between minimal and empty. My north star is shipping software
-              that earns trust on first use.
+              I build full-stack applications using modern technologies while exploring
+              AI/ML, Blockchain and DevOps systems to create impactful solutions.
             </p>
+
             <a
               href={personalInfo.resumeUrl}
               data-magnetic

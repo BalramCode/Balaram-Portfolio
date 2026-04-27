@@ -1,7 +1,9 @@
 // Mock data for Balaram Naik's Portfolio
 // All data here is for the frontend-only phase. Will be replaced by backend later.
 import profileImg from "../src/assets/image.png";
-
+import utkalpreneurPhoto from "../src/assets/DSC_4032.JPG";
+import codekritiPhoto from "../src/assets/20260307_62627PMByGPSMapCamera.jpg";
+import aiHackathonPhoto from "../src/assets/IMG-20251210-WA0063.jpg";
 export const personalInfo = {
   name: "Balaram Naik",
   roles: ["Full Stack Developer", "Problem Solver", "MERN Expert", "CS Student"],
@@ -135,6 +137,52 @@ export const projects = [
 
 ];
 
+export const achievements = [
+  {
+    id:  "utkalpreneur ",
+    category:  "Technical Leadership ",
+    title:  "Utkalpreneur E-Fest Win ",
+    subtitle:  "Led Team Kautilya as Tech Lead to 'Best Innovative Idea' award. ",
+    detail:
+       "Nalanda Institute of Technology. Excelled in turning complex problems into working full-stack solutions. ",
+    icon:  "trophy ",
+    accent:  "cyan ",
+    tag:  "1st Place ",
+    image: utkalpreneurPhoto,
+  },
+  {
+    id:  "codekriti ",
+    category:  "Competitive Programming ",
+    title:  "Code Kriti 4.0 Champion ",
+    subtitle:  "1st place in 'Algorithm-to-Code' competition. ",
+    detail:
+       "Parala Maharaja Engineering College. Displayed advanced algorithmic thinking and coding proficiency, defeating a strong field. ",
+    icon:  "code ",
+    accent:  "violet ",
+    tag:  "Champion ",
+    image: codekritiPhoto,
+  },
+  {
+    id:  "odisha-ai ",
+    category:  "AI Innovation & Ethics ",
+    title:  "Odisha AI Hackathon 2025 ",
+    subtitle:  "Participant & Innovator. ",
+    detail:
+       "NIST University. Gained hands-on experience in AI model selection, ethical AI practices, and deployment readiness. ",
+    icon:  "brain ",
+    accent:  "cyan ",
+    tag:  "Innovator ",
+    image: aiHackathonPhoto,
+  },
+];
+
+export const achievementTypewriter = [
+   "Awarded. ",
+   "Recognized. ",
+   "Innovating. ",
+];
+
+
 export const experience = [
   {
     role: "Full Stack Developer (Freelance)",
@@ -172,5 +220,6 @@ export const navLinks = [
   { id: "stack", label: "Stack" },
   { id: "work", label: "Work" },
   { id: "experience", label: "Experience" },
+  { id: "achievement", label: "Achievement" },
   { id: "contact", label: "Contact" },
 ];
