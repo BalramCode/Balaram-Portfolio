@@ -216,10 +216,10 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-slate-500">
+      {/* <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-slate-500">
         <span className="mono text-[10px] tracking-[0.4em]">SCROLL</span>
         <span className="w-px h-10 bg-gradient-to-b from-cyan-400/60 to-transparent"></span>
-      </div>
+      </div> */}
     </section>
   );
 };
