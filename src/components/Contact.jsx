@@ -3,7 +3,7 @@ import { personalInfo } from "../mock";
 import { Mail, MapPin, Send, Code2, Phone } from "lucide-react";
 import { toast } from "sonner";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import emailjs from "@emailjs/browser"; // Make sure to run: npm install @emailjs/browser
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const formRef = useRef();
@@ -22,7 +22,6 @@ const Contact = () => {
 
     setSending(true);
 
-    // Replace these strings with your actual EmailJS IDs
     const SERVICE_ID = "service_dc5d6sa";
     const TEMPLATE_ID = "template_s8s0dqi";
     const PUBLIC_KEY = "nrcKo0UqyL_z483jQ";

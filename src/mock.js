@@ -26,7 +26,7 @@ about: [
   ],
   socials: {
     github: "https://github.com/BalramCode",
-    linkedin: "https://linkedin.com/in/balaram-naik",
+    linkedin: "https://linkedin.com/in/balaram-naik-592415336",
     leetcode: "https://leetcode.com/u/BalramNaik2006",
     email: "bnaik1005@gmail.com",
   },
