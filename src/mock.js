@@ -5,6 +5,9 @@ import utkalpreneurPhoto from "../src/assets/DSC_4032.JPG";
 import codekritiPhoto from "../src/assets/20260307_62627PMByGPSMapCamera.jpg";
 import aiHackathonPhoto from "../src/assets/IMG-20251210-WA0063.jpg";
 import resumePdf from "../src/assets/Balaram Naik Resume.pdf";
+import smartAttendancePhoto from "../src/assets/smartAttendanceMMU.png"
+import steetFoodPhoto from "../src/assets/streetfood.avif"
+import classGenAI from "../src/assets/ClassGenAI.jpeg"
 export const personalInfo = {
   name: "Balaram Naik",
   roles: ["Full Stack Developer", "Problem Solver", "MERN Expert", "CS Student"],
@@ -83,46 +86,7 @@ export const techStack = [
 ];
 
 export const projects = [
-  {
-    id: "tasteradar",
-    title: "TasteRadar",
-    subtitle: "Street Food Discovery",
-    description:
-      "Discover hidden street-food gems with geolocation-based search, user reviews and ratings — built for foodies, by a foodie.",
-    tags: ["React", "Node.js", "Mapbox", "MongoDB"],
-    accent: "cyan",
-    link: "https://tasteradar.in",
-    image:
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900&q=80",
-    year: "2024",
-  },
-  {
-    id: "smart-attendance",
-    title: "Smart Attendance",
-    subtitle: "Computer-Vision Attendance System",
-    description:
-      "A web app that automates classroom attendance using face recognition — secure, fast and integrated with admin dashboards.",
-    tags: ["React", "Python", "OpenCV", "Node.js"],
-    accent: "violet",
-    link: "https://smartattendancecs.onrender.com",
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80",
-    year: "2024",
-  },
-  {
-    id: "classgen",
-    title: "ClassGen AI",
-    subtitle: "AI Educator's Smart Assistant",
-    description:
-      "An AI-driven assistant that auto-generates lesson plans, quizzes and learning summaries — saving educators hours each week.",
-    tags: ["React", "Node.js", "OpenAI", "MongoDB"],
-    accent: "cyan",
-    link: "https://classgen-ai-educator-s-smart-assistant.onrender.com",
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=80",
-    year: "2025",
-  },
-  {
+    {
     id: "skillconnect",
     title: "SkillConnect",
     subtitle: "Collaborative MERN Platform",
@@ -135,6 +99,46 @@ export const projects = [
       "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80",
     year: "2024",
   },
+  {
+    id: "smart-attendance",
+    title: "Smart Attendance",
+    subtitle: "Computer-Vision Attendance System",
+    description:
+      "A web app that automates classroom attendance using face recognition — secure, fast and integrated with admin dashboards.",
+    tags: ["React", "Python", "OpenCV", "Node.js"],
+    accent: "violet",
+    link: "https://smartattendancecs.onrender.com",
+    image:smartAttendancePhoto,
+      // "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80",
+      year: "2024",
+    },
+    {
+      id: "classgen",
+      title: "ClassGen AI",
+      subtitle: "AI Educator's Smart Assistant",
+      description:
+      "An AI-driven assistant that auto-generates lesson plans, quizzes and learning summaries — saving educators hours each week.",
+      tags: ["React", "Node.js", "OpenAI", "MongoDB"],
+      accent: "cyan",
+      link: "https://classgen-ai-educator-s-smart-assistant.onrender.com",
+      image:classGenAI,
+      // "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=80",
+      year: "2025",
+    },
+    {
+      id: "tasteradar",
+      title: "TasteRadar",
+      subtitle: "Street Food Discovery",
+      description:
+        "Discover hidden street-food gems with geolocation-based search, user reviews and ratings — built for foodies, by a foodie.",
+      tags: ["React", "Node.js", "Mapbox", "MongoDB"],
+      accent: "cyan",
+      link: "https://tasteradar.in",
+      image:steetFoodPhoto,
+        // "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900&q=80",
+      year: "2024",
+    },
+
 
 ];
 
@@ -190,7 +194,7 @@ export const experience = [
     org: "DAPTA NGO",
     period: "May 2026 — Aug 2026",
     points: [
-      "Managed digital records and data organization for NGO operations.",
+      "Managed digital records, data organization, and documentation workflows to improve operational efficiency.",
       "Provided technical support for software, documentation, and computer systems.",
       "Applied coding and web development skills to support digital workflows and technical tasks.",
     ],
@@ -210,19 +214,23 @@ export const experience = [
     org: "GitHub — BalramCode",
     period: "2024 — Present",
     points: [
-      "Active contributor across 15+ public repositories with 400+ commits.",
+      "Active contributor across 15+ public repositories with 400+ commits, building projects and maintaining clean code practices",
       "Maintain personal libraries and project starters around the MERN stack.",
     ],
   },
   {
-    role: "BSc, Computer Science",
-    org: "Maa Manikeshwari University",
-    period: "2024 — 2027",
-    points: [
-      "Coursework in DSA, OS, DBMS, Blockchain, Computer Networks, AI/ML.",
-      "150+ DSA problems solved on LeetCode (handle: BalramNaik2006).",
-    ],
-  },
+  role: "BSc, Computer Science",
+  org: "Maa Manikeshwari University",
+  period: "2024 — 2027",
+  points: [
+    "Coursework in DSA, OS, DBMS, Blockchain, Computer Networks, AI/ML.",
+    {
+      text: "150+ DSA problems solved on LeetCode",
+      link: "https://leetcode.com/u/BalramNaik2006/",
+      label: "BalramNaik2006 ",
+    },
+  ],
+},
 ];
 
 export const navLinks = [

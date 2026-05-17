@@ -31,9 +31,8 @@ const Experience = () => {
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
                   <div
-                    className={`pl-12 md:pl-0 ${
-                      left ? "md:text-right md:pr-12" : "md:col-start-2 md:pl-12"
-                    }`}
+                    className={`pl-12 md:pl-0 ${left ? "md:text-right md:pr-12" : "md:col-start-2 md:pl-12"
+                      }`}
                   >
                     <div className="glass rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-colors">
                       <div className="flex items-center gap-2 mb-2 md:justify-start">
@@ -47,10 +46,37 @@ const Experience = () => {
                       <div className="text-sm text-cyan-300 mt-0.5">{e.org}</div>
                       <ul className="mt-4 space-y-2 text-slate-400 text-sm leading-relaxed">
                         {e.points.map((p, j) => (
-                          <li key={j} className="flex gap-2 md:justify-end md:text-right">
-                            {!left && <span className="text-cyan-400 shrink-0">•</span>}
-                            <span>{p}</span>
-                            {left && <span className="text-cyan-400 shrink-0 md:order-first">•</span>}
+                          <li
+                            key={j}
+                            className="flex gap-2 md:justify-end md:text-right"
+                          >
+                            {!left && (
+                              <span className="text-cyan-400 shrink-0">•</span>
+                            )}
+
+                            <span>
+                              {typeof p === "string" ? (
+                                p
+                              ) : (
+                                <>
+                                  {p.text} —{" "}
+                                  <a
+                                    href={p.link}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="text-cyan-400 hover:underline"
+                                  >
+                                    {p.label}
+                                  </a>
+                                </>
+                              )}
+                            </span>
+
+                            {left && (
+                              <span className="text-cyan-400 shrink-0 md:order-first">
+                                •
+                              </span>
+                            )}
                           </li>
                         ))}
                       </ul>
