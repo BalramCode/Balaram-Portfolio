@@ -2,7 +2,7 @@ import React from "react";
 import { personalInfo, navLinks } from "../mock";
 import { Code2, Heart } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-
+import { SiLeetcode } from "react-icons/si";
 const Footer = () => {
   const scrollTo = (id) => {
     const el = document.getElementById(id);
@@ -87,10 +87,10 @@ const Footer = () => {
                   data-magnetic
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="LeetCode"
-                  className="w-10 h-10 rounded-xl glass flex items-center justify-center border border-white/10 hover:border-cyan-400/30 hover:text-cyan-300 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 rounded-xl glass border border-white/10 hover:border-cyan-400/30 hover:text-cyan-300 transition-colors text-sm"
                 >
-                  <Code2 className="w-4 h-4" />
+                  {/* <Code2 className="w-4 h-4" /> LeetCode */}
+                  <SiLeetcode className="w-4 h-4" />LeetCode
                 </a>
               </div>
               <a
@@ -107,7 +107,7 @@ const Footer = () => {
               © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
             </div>
             <div className="flex items-center gap-1.5">
-              Built with <Heart className="w-3 h-3 text-cyan-400" /> &amp; the MERN stack.
+              Built with MERN stack.
             </div>
           </div>
         </div>

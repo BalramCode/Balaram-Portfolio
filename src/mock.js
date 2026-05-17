@@ -4,6 +4,7 @@ import profileImg from "../src/assets/image.png";
 import utkalpreneurPhoto from "../src/assets/DSC_4032.JPG";
 import codekritiPhoto from "../src/assets/20260307_62627PMByGPSMapCamera.jpg";
 import aiHackathonPhoto from "../src/assets/IMG-20251210-WA0063.jpg";
+import resumePdf from "../src/assets/Balaram Naik Resume.pdf";
 export const personalInfo = {
   name: "Balaram Naik",
   roles: ["Full Stack Developer", "Problem Solver", "MERN Expert", "CS Student"],
@@ -12,14 +13,14 @@ export const personalInfo = {
   location: "India",
   email: "bnaik1005@gmail.com",
   phone: "+91 82606 47549",
-  resumeUrl: "#",
+  resumeUrl: resumePdf,
   headshot: profileImg,
-about: [
+  about: [
     "I'm a B.Sc. Computer Science undergraduate at Maa Manikeshwari University with a strong academic foundation (8.17 CGPA), passionate about building scalable full-stack applications. My primary expertise lies in the MERN ecosystem, though I frequently explore the complexities of AI, Blockchain, and optimized backend system architecture.",
-    "Acting as Tech Lead for multiple projects, I have developed and deployed production-ready platforms like TasteRadar and ShopMee, focusing on real-world utility and clean, documented code. I am dedicated to writing optimized logic from scratch and creating user-centric interfaces that provide a seamless experience.",
+    "Acting as Tech Lead for multiple projects, I have developed and deployed production-ready platforms like SkillConect, ClassGenAI, CraftChain, and TasteRadar, focusing on real-world utility and clean, documented code. I am dedicated to writing optimized logic from scratch and creating user-centric interfaces that provide a seamless experience.",
   ],
   stats: [
-    { label: "Projects Shipped", value: "4+" },
+    { label: "Projects Shipped", value: "5+" },
     { label: "DSA Problems", value: "150+" },
     { label: "Tech Stack Tools", value: "10+" },
     { label: "GitHub Commits", value: "400+" },
@@ -82,7 +83,7 @@ export const techStack = [
 ];
 
 export const projects = [
-    {
+  {
     id: "tasteradar",
     title: "TasteRadar",
     subtitle: "Street Food Discovery",
@@ -139,51 +140,61 @@ export const projects = [
 
 export const achievements = [
   {
-    id:  "utkalpreneur ",
-    category:  "Technical Leadership ",
-    title:  "Utkalpreneur E-Fest Win ",
-    subtitle:  "Led Team Kautilya as Tech Lead to 'Best Innovative Idea' award. ",
+    id: "utkalpreneur ",
+    category: "Technical Leadership ",
+    title: "Utkalpreneur E-Fest Win ",
+    subtitle: "Led Team Kautilya as Tech Lead to 'Best Innovative Idea' award. ",
     detail:
-       "Nalanda Institute of Technology. Excelled in turning complex problems into working full-stack solutions. ",
-    icon:  "trophy ",
-    accent:  "cyan ",
-    tag:  "1st Place ",
+      "Nalanda Institute of Technology. Excelled in turning complex problems into working full-stack solutions. ",
+    icon: "trophy ",
+    accent: "cyan ",
+    tag: "1st Place ",
     image: utkalpreneurPhoto,
   },
   {
-    id:  "codekriti ",
-    category:  "Competitive Programming ",
-    title:  "Code Kriti 4.0 Champion ",
-    subtitle:  "1st place in 'Algorithm-to-Code' competition. ",
+    id: "codekriti ",
+    category: "Competitive Programming ",
+    title: "Code Kriti 4.0 Champion ",
+    subtitle: "1st place in 'Algorithm-to-Code' competition. ",
     detail:
-       "Parala Maharaja Engineering College. Displayed advanced algorithmic thinking and coding proficiency, defeating a strong field. ",
-    icon:  "code ",
-    accent:  "violet ",
-    tag:  "Champion ",
+      "Parala Maharaja Engineering College. Displayed advanced algorithmic thinking and coding proficiency, defeating a strong field. ",
+    icon: "code ",
+    accent: "violet ",
+    tag: "Champion ",
     image: codekritiPhoto,
   },
   {
-    id:  "odisha-ai ",
-    category:  "AI Innovation & Ethics ",
-    title:  "Odisha AI Hackathon 2025 ",
-    subtitle:  "Participant & Innovator. ",
+    id: "odisha-ai ",
+    category: "AI Innovation & Ethics ",
+    title: "Odisha AI Hackathon 2025 ",
+    subtitle: "Participant & Innovator. ",
     detail:
-       "NIST University. Gained hands-on experience in AI model selection, ethical AI practices, and deployment readiness. ",
-    icon:  "brain ",
-    accent:  "cyan ",
-    tag:  "Innovator ",
+      "NIST University. Gained hands-on experience in AI model selection, ethical AI practices, and deployment readiness. ",
+    icon: "brain ",
+    accent: "cyan ",
+    tag: "Innovator ",
     image: aiHackathonPhoto,
   },
 ];
 
 export const achievementTypewriter = [
-   "Awarded. ",
-   "Recognized. ",
-   "Innovating. ",
+  "Awarded. ",
+  "Recognized. ",
+  "Innovating. ",
 ];
 
 
 export const experience = [
+  {
+    role: "Software and Data Management Intern",
+    org: "DAPTA NGO",
+    period: "May 2026 — Aug 2026",
+    points: [
+      "Managed digital records and data organization for NGO operations.",
+      "Provided technical support for software, documentation, and computer systems.",
+      "Applied coding and web development skills to support digital workflows and technical tasks.",
+    ],
+  },
   {
     role: "Full Stack Developer (Freelance)",
     org: "Self-Initiated Projects",
@@ -205,7 +216,7 @@ export const experience = [
   },
   {
     role: "BSc, Computer Science",
-    org: "Maa Manikeshwari University, India",
+    org: "Maa Manikeshwari University",
     period: "2024 — 2027",
     points: [
       "Coursework in DSA, OS, DBMS, Blockchain, Computer Networks, AI/ML.",

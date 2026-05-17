@@ -4,7 +4,7 @@ import { Code2, Menu, X } from "lucide-react";
 // Remove Github and Linkedin from lucide-react
 // Import them from Font Awesome (fa) or Simple Icons (si) instead
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-
+import { SiLeetcode } from "react-icons/si";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -36,15 +36,13 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "py-3" : "py-5"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "py-3" : "py-5"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <nav
-          className={`flex items-center justify-between rounded-2xl px-4 md:px-6 py-3 transition-all duration-500 ${
-            scrolled ? "glass-strong" : "glass"
-          }`}
+          className={`flex items-center justify-between rounded-2xl px-4 md:px-6 py-3 transition-all duration-500 ${scrolled ? "glass-strong" : "glass"
+            }`}
         >
           {/* Logo */}
           <button
@@ -67,11 +65,10 @@ const Navbar = () => {
                 <button
                   data-magnetic
                   onClick={() => scrollTo(l.id)}
-                  className={`relative px-4 py-2 text-sm font-medium tracking-wide rounded-lg transition-colors duration-300 ${
-                    active === l.id
+                  className={`relative px-4 py-2 text-sm font-medium tracking-wide rounded-lg transition-colors duration-300 ${active === l.id
                       ? "text-cyan-300"
                       : "text-slate-400 hover:text-slate-100"
-                  }`}
+                    }`}
                 >
                   {l.label}
                   {active === l.id && (
@@ -112,7 +109,7 @@ const Navbar = () => {
               aria-label="LeetCode"
               className="hidden sm:flex w-9 h-9 items-center justify-center rounded-lg text-slate-400 hover:text-cyan-300 hover:bg-white/5 transition-colors"
             >
-              <Code2 className="w-4 h-4" />
+              <SiLeetcode className="w-4 h-4" />
             </a>
             <button
               onClick={() => scrollTo("contact")}
@@ -139,11 +136,10 @@ const Navbar = () => {
                 <li key={l.id}>
                   <button
                     onClick={() => scrollTo(l.id)}
-                    className={`w-full text-left px-4 py-3 rounded-lg text-sm ${
-                      active === l.id
+                    className={`w-full text-left px-4 py-3 rounded-lg text-sm ${active === l.id
                         ? "text-cyan-300 bg-white/5"
                         : "text-slate-300 hover:bg-white/5"
-                    }`}
+                      }`}
                   >
                     {l.label}
                   </button>

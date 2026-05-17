@@ -3,6 +3,8 @@ import { personalInfo } from "../mock";
 import { Mail, MapPin, Send, Code2, Phone } from "lucide-react";
 import { toast } from "sonner";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
+
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -14,7 +16,7 @@ const Contact = () => {
 
   const submit = async (e) => {
     e.preventDefault();
-    
+
     if (!form.name || !form.email || !form.message) {
       toast.error("Please fill in name, email and message.");
       return;
@@ -33,7 +35,7 @@ const Contact = () => {
           setSending(false);
           toast.success("Message sent! I'll reply within 24h.");
           setForm({ name: "", email: "", subject: "", message: "" });
-          
+
           // Optional: Local backup
           const stored = JSON.parse(localStorage.getItem("bn_messages") || "[]");
           stored.push({ ...form, at: new Date().toISOString() });
@@ -133,7 +135,7 @@ const Contact = () => {
                 data-magnetic
                 className="w-10 h-10 rounded-lg glass flex items-center justify-center hover:text-cyan-300 transition-colors"
               >
-                <Code2 className="w-4 h-4" />
+                <SiLeetcode className="w-4 h-4" />
               </a>
             </div>
           </div>

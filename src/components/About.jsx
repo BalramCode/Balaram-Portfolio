@@ -1,7 +1,7 @@
 import React from "react";
 import { personalInfo } from "../mock";
 import { Download } from "lucide-react";
-
+import { ExternalLink } from "lucide-react";
 const About = () => {
   return (
     <section id="about" className="relative py-28">
@@ -22,11 +22,12 @@ const About = () => {
 
             <a
               href={personalInfo.resumeUrl}
+              target="_blank"
               data-magnetic
               className="mt-7 inline-flex items-center gap-2 px-5 py-3 rounded-xl glass border border-white/10 hover:border-cyan-400/40 hover:text-cyan-300 transition-colors text-sm"
             >
-              <Download className="w-4 h-4" />
-              Download Resume
+              <ExternalLink className="w-4 h-4" />
+              Open Resume
             </a>
           </div>
 
